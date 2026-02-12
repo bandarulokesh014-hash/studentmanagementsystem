@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Choose Role</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Boxicons -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --glass: rgba(255,255,255,0.15);
+  --border: rgba(255,255,255,0.25);
+  --shadow: rgba(0,0,0,0.25);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1e3c72);
+  background-size:400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.panel{
+  width:100%;
+  max-width:900px;
+  padding:50px;
+  border-radius:20px;
+  background:var(--glass);
+  backdrop-filter:blur(25px);
+  border:1px solid var(--border);
+  box-shadow:0 25px 60px var(--shadow);
+  text-align:center;
+  color:#fff;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.panel h1{
+  font-size:28px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.panel p{
+  font-size:14px;
+  color:#e2e8f0;
+  margin-bottom:40px;
+}
+
+.roles{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.role-btn{
+  width:240px;
+  height:240px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#fff;
+  transition:all 0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.role-btn::before{
+  content:"";
+  position:absolute;
+  width:300%;
+  height:300%;
+  background:linear-gradient(45deg,#3b82f6,#6366f1,#06b6d4,#3b82f6);
+  top:-100%;
+  left:-100%;
+  transform:rotate(25deg);
+  transition:0.6s;
+  opacity:0;
+}
+
+.role-btn:hover::before{
+  top:0;
+  left:0;
+  opacity:0.15;
+}
+
+.role-btn:hover{
+  transform:translateY(-12px) scale(1.05);
+  box-shadow:0 30px 60px rgba(0,0,0,0.4);
+}
+
+.role-icon{
+  font-size:60px;
+  margin-bottom:15px;
+}
+
+.role-label{
+  font-size:20px;
+  font-weight:600;
+}
+
+.role-sub{
+  font-size:13px;
+  margin-top:6px;
+  color:#cbd5e1;
+}
+
+@media(max-width:600px){
+  .role-btn{
+    width:200px;
+    height:200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+  <h1>Choose Your Role</h1>
+  <p>Select Student or Staff to continue to the portal</p>
+
+  <div class="roles">
+
+    <!-- Staff -->
+    <a href="staff.html" class="role-btn">
+      <div class="role-icon"><i class='bx bxs-briefcase'></i></div>
+      <div class="role-label">Staff</div>
+      <div class="role-sub">Faculty & Administration</div>
+    </a>
+
+    <!-- Student -->
+    <a href="studentdetails.html" class="role-btn">
+      <div class="role-icon"><i class='bx bxs-graduation'></i></div>
+      <div class="role-label">Student</div>
+      <div class="role-sub">Access Student Dashboard</div>
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>

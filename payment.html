@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pay Now | College Fee Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Card */
+.payment-card{
+  width:430px;
+  background:white;
+  border-radius:28px;
+  padding:35px;
+  box-shadow:0 35px 70px rgba(0,0,0,0.4);
+  text-align:center;
+  animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.payment-card h2{
+  color:#1e40af;
+  margin-bottom:8px;
+}
+
+.payment-card p{
+  color:#475569;
+  margin-bottom:18px;
+}
+
+/* Amount */
+.amount{
+  font-size:22px;
+  font-weight:700;
+  color:#0f172a;
+  background:#e0f2fe;
+  padding:10px;
+  border-radius:14px;
+  margin-bottom:20px;
+}
+
+/* QR */
+.qr-box{
+  background:#f1f5f9;
+  border-radius:22px;
+  padding:22px;
+  margin-bottom:20px;
+}
+
+.qr-box img{
+  width:210px;
+  height:210px;
+}
+
+/* UPI Apps */
+.upi-options{
+  display:flex;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.upi-btn{
+  flex:1;
+  padding:12px;
+  border-radius:16px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.phonepe{
+  background:#5f259f;
+  color:white;
+}
+
+.gpay{
+  background:#ffffff;
+  border:2px solid #4285f4;
+  color:#4285f4;
+}
+
+.upi-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* Instructions */
+.instructions{
+  text-align:left;
+  background:#eff6ff;
+  padding:15px;
+  border-radius:16px;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+/* Done Button */
+.main-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  font-size:16px;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(135deg,#2563eb,#38bdf8);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.main-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(56,189,248,.5);
+}
+
+.secure{
+  margin-top:15px;
+  font-size:13px;
+  color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="payment-card">
+  <h2>💳 Pay Now</h2>
+  <p>Choose UPI app or scan QR</p>
+
+  <div class="amount">Amount: ₹25,000</div>
+
+  <div class="qr-box">
+    <img src="qr.jpng.jpeg" class="college-img" alt="College Logo">
+
+  </div>
+
+  <div class="upi-options">
+    <button class="upi-btn phonepe" onclick="openPhonePe()">📱 PhonePe</button>
+    <button class="upi-btn gpay" onclick="openGPay()">🟦 Google Pay</button>
+  </div>
+
+  <div class="instructions">
+    <b>Payment Instructions:</b>
+    <ul>
+      <li>Select PhonePe / Google Pay or scan QR</li>
+      <li>Verify amount before payment</li>
+      <li>Complete payment successfully</li>
+      <li>Click “Payment Done” below</li>
+    </ul>
+  </div>
+
+  <button class="main-btn" onclick="paymentDone()">Payment Done</button>
+
+  <div class="secure">🔒 100% Secure UPI Payment</div>
+</div>
+
+<script>
+function paymentDone(){
+  alert("✅ Payment recorded successfully!");
+}
+
+function openPhonePe(){
+  alert("Opening PhonePe app...");
+  // real UPI deep link goes here
+}
+
+function openGPay(){
+  alert("Opening Google Pay app...");
+  // real UPI deep link goes here
+}
+</script>
+
+</body>
+</html>

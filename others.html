@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Others</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(135deg,#fdf4ff,#f8fafc);
+}
+
+/* Header */
+.header{
+  background:linear-gradient(135deg,#454cd3,#566fd3);
+  color:white;
+  padding:25px;
+  text-align:center;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#4c4a76;
+}
+
+.card p{
+  color:#475569;
+}
+
+/* Back link */
+.back{
+  display:inline-block;
+  margin-top:30px;
+  text-decoration:none;
+  color:#4a4c6b;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Other Details</h1>
+  <p>Additional student information</p>
+</div>
+
+<div class="container">
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>📊 Internal Marks</h3>
+      <p>View your subject-wise internal assessment marks.</p>
+    </div>
+
+    <div class="card">
+      <h3>📝 Exam Schedule</h3>
+      <p>Check upcoming exams and important dates.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔔 Notifications</h3>
+      <p>Stay updated with college announcements.</p>
+    </div>
+
+  </div>
+
+  <a href="studentdashboard.html" class="back">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

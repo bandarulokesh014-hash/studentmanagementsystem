@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Dashboard</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  display:flex;
+  min-height:100vh;
+  background:linear-gradient(135deg,#f1f5f9,#e0f2fe);
+}
+
+/* Sidebar */
+.sidebar{
+  width:250px;
+  background:linear-gradient(180deg,#1e293b,#0f172a);
+  color:white;
+  padding-top:30px;
+  box-shadow:4px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidebar h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:24px;
+}
+
+.sidebar a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 25px;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:#334155;
+  padding-left:35px;
+}
+
+/* Main area */
+.main{
+  flex:1;
+  padding:30px;
+}
+
+/* Top card */
+.top-card{
+  background:linear-gradient(135deg,#576177,#1e40af);
+  color:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.top-card h1{
+  margin:0;
+  font-size:32px;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin:15px 0 10px;
+  color:#535a72;
+}
+
+.card p{
+  color:#475569;
+}
+
+/* Pay Now Button */
+.pay-btn{
+  margin-top:15px;
+  display:inline-block;
+  padding:10px 18px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.pay-btn:hover{
+  opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>🎓 Student</h2>
+  <a href="fees.html">💰 Fees</a>
+  <a href="attendance.html">📅 Attendance</a>
+  <a href="others.html">📌 Others</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+  <div class="top-card">
+    <h1>Welcome, Student 👋</h1>
+    <p>Manage your college activities from one place</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>💰 Fees</h3>
+      <p>Check fee status and make payments</p>
+      <a href="payment.html" class="pay-btn">Pay Now</a>
+    </div>
+
+    <div class="card">
+      <h3>📅 Attendance</h3>
+      <p>Track your subject-wise attendance</p>
+    </div>
+
+    <div class="card">
+      <h3>📌 Others</h3>
+      <p>Marks, exams & notifications</p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
+<script>
+fetch('/session')
+  .then(res => res.json())
+  .then(data => {
+    if (!data.loggedIn) {
+      window.location.href = 'login.html';
+    }
+  });
+</script>
+

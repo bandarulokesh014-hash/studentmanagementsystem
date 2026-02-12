@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fees</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:linear-gradient(135deg,#e0f2fe,#f8fafc);
+}
+
+/* Header */
+.header{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  color:white;
+  padding:25px;
+  text-align:center;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th{
+  background:#f1f5f9;
+  color:#1f2937;
+  padding:14px;
+}
+
+td{
+  padding:14px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+/* Status */
+.paid{
+  color:#16a34a;
+  font-weight:bold;
+}
+
+.pending{
+  color:#dc2626;
+  font-weight:bold;
+}
+
+/* Button */
+.pay-btn{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.pay-btn:hover{
+  background:#1e40af;
+}
+
+/* Back link */
+.back{
+  display:inline-block;
+  margin-top:25px;
+  text-decoration:none;
+  color:#2563eb;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Fee Details</h1>
+  <p>View and manage your college fees</p>
+</div>
+
+<div class="container">
+
+<table>
+  <tr>
+    <th>Fee Type</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+
+  <tr>
+    <td>Tuition Fee</td>
+    <td>₹25,000</td>
+    <td class="paid">Paid</td>
+    <td>—</td>
+  </tr>
+
+  <tr>
+    <td>Exam Fee</td>
+    <td>₹2,000</td>
+    <td class="pending">Pending</td>
+    <td><button class="pay-btn">Pay Now</button></td>
+  </tr>
+</table>
+
+<a href="studentdashboard.html" class="back">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
